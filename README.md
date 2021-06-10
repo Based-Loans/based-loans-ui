@@ -1,4 +1,4 @@
-# based-loans-app
+# based-loans-ui
 
 Based Loans UI
 
