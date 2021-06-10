@@ -1,0 +1,98 @@
+.window * {
+  font-family: var(--font-family);
+  font-size: var(--font-size-normal);
+  letter-spacing: 1px;
+}
+
+.window {
+  background: var(--color-primary);
+  box-shadow: var(--box-shadow-window);
+  padding: 6px;
+  color: black;
+  width: calc(100% - var(--padding-normal));
+  margin: var(--padding-narrow);
+}
+
+.window .window-content {
+  overflow: auto;
+}
+
+.title-bar {
+  background: var(--gradient-title);
+  padding: 6px;
+}
+.title-bar.second {
+  background: var(--gradient-title2);
+}
+.title-bar-text {
+  font-weight: normal;
+}
+
+button.padded {
+  background: var(--color-primary);
+  box-shadow: var(--box-shadow-window-button);
+  padding-left: var(--padding-narrow);
+  padding-right: var(--padding-narrow);
+  color: var(--color-hightlight);
+}
+
+.title-bar-controls button {
+  background: var(--color-primary);
+  box-shadow: var(--box-shadow-window-button);
+  padding: 50%;
+  background-position: 50% 46% !important;
+}
+
+@media all and (max-width: 767px) {
+  .window,
+  .title-bar {
+    padding: 4px;
+  }
+  .window * {
+    font-size: var(--font-size-small);
+  }
+}
+@media all and (min-width: 2400px) {
+  .window,
+  .title-bar {
+    padding: 9px;
+  }
+  .window * {
+    font-size: var(--font-size-2x);
+  }
+}
+@media all and (min-width: 3200px) {
+  .window,
+  .title-bar {
+    max-width: 2600px;
+    padding: 12px;
+  }
+  .window * {
+    font-size: var(--font-size-3x);
+  }
+}
+
+table {
+  text-align: right;
+  width: 100%;
+}
+
+table thead {
+  color: var(--color-hightlight);
+  text-shadow: -1px -1px var(--color-light);
+  font-size: 90%;
+}
+
+table th {
+  padding: var(--padding-narrow);
+}
+
+table td {
+  padding: var(--padding-narrow);
+  border-top: 1px solid var(--color-border);
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}

@@ -1,0 +1,37 @@
+.account {
+  display: block;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.tokenIcon {
+  width: 32px;
+  height: 32px;
+  margin-left: var(--padding-narrow);
+  margin-right: calc(var(--padding-normal) * 1.5);
+}
+
+@media all and (max-width: 767px) {
+  .tokenIcon {
+    margin-left: var(--padding-narrow);
+    margin-right: var(--padding-narrow);
+  }
+}
+
+.flicking {
+  animation: flickerAnimation 0.5s infinite;
+}
+@keyframes flickerAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

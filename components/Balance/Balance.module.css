@@ -1,0 +1,98 @@
+.balance {
+  display: block;
+}
+
+.info {
+  width: 75%;
+  margin: auto;
+}
+
+.supply,
+.borrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.label {
+  font-size: 150%;
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.value {
+  font-size: 250%;
+}
+
+.apy {
+  min-width: calc(var(--padding-normal) * 6.5);
+  height: calc(var(--padding-normal) * 6.5);
+  background-image: url(/assets/apy-circle.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.apy .label {
+  font-size: 90%;
+}
+
+.apy .value {
+  font-size: 160%;
+}
+
+.limit {
+  width: 75%;
+  margin: calc(var(--padding-normal) * 2) auto 0;
+  font-size: 90%;
+}
+
+.status {
+  flex: 1;
+  height: calc(var(--padding-normal) / 5);
+  margin: 0 var(--padding-narrow);
+  background-color: var(--color-opacity-04);
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: var(--gradient-fill);
+}
+
+@media all and (max-width: 767px) {
+  .info,
+  .limit {
+    width: 100%;
+  }
+
+  .label {
+    font-size: 100%;
+  }
+
+  .value {
+    font-size: 150%;
+  }
+
+  .apy {
+    min-width: calc(var(--padding-normal) * 3.5);
+    height: calc(var(--padding-normal) * 3.5);
+  }
+
+  .apy .label {
+    font-size: 70%;
+  }
+  
+  .apy .value {
+    font-size: 120%;
+  }
+}
+@media all and (min-width: 2400px) {
+}
+@media all and (min-width: 3200px) {
+}

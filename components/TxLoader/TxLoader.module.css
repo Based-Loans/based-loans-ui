@@ -1,0 +1,19 @@
+.loader {
+  background-image: url(/assets/modal-bg.jpeg);
+  background-size: cover;
+  padding: var(--padding-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader p {
+  text-transform: uppercase;
+  color: var(--color-blue);
+  font-size: 150%;
+}
+
+.loader img {
+  width: 50%;
+  margin: var(--padding-normal);
+}

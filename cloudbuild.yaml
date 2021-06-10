@@ -1,0 +1,51 @@
+substitutions:
+  _IMAGE: 'gcr.io/basedmoney/based-loans'
+  _CLUSTER: 'based'
+  _CLUSTER_ZONE: 'us-central1-c'
+  _APP_NAME: 'based-loans-ui-staging'
+  _HELM_IMAGE: 'gcr.io/basedmoney/helm'
+timeout: '25m'
+steps:
+
+  - id: pull
+    name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    args: ['-c', 'docker pull $_IMAGE:$BRANCH_NAME || true' ]
+    waitFor: ['-']
+
+  - id: build
+    name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '-t', '$_IMAGE:$BRANCH_NAME',
+      '-t', '$_IMAGE:$COMMIT_SHA',
+      '-f', 'dev.dockerfile',
+      '--cache-from', '$_IMAGE:$BRANCH_NAME',
+      '.'
+    ]
+    waitFor:
+      - 'pull'
+
+  - id: push1
+    name: 'gcr.io/cloud-builders/docker'
+    args: [ 'push', '$_IMAGE:$COMMIT_SHA' ]
+    waitFor:
+      - 'build'
+
+  - id: push2
+    name: 'gcr.io/cloud-builders/docker'
+    args: [ 'push', '$_IMAGE:$BRANCH_NAME' ]
+    waitFor:
+      - 'build'
+
+  - id: deploy
+    name: '$_HELM_IMAGE'
+    entrypoint: 'bash'
+    args: [
+      '-c', 'gcloud components install kubectl && gcloud container clusters get-credentials $_CLUSTER --zone $_CLUSTER_ZONE && helm upgrade --install $_APP_NAME ops/$_APP_NAME --set-string image.tag=$COMMIT_SHA --set-string image.repository=$_IMAGE']
+    waitFor:
+      - 'push1'
+      - 'push2'
+
+options:
+  machineType: 'N1_HIGHCPU_8'

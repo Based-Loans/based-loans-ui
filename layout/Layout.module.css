@@ -1,0 +1,169 @@
+.main {
+  padding: 0;
+  min-height: 100vh;
+}
+
+.global {
+  text-transform: capitalize;
+  background: var(--color-primary);
+  color: var(--color-hightlight);
+  text-align: center;
+  padding: 3px;
+  z-index: 1;
+  box-shadow: 0 1px 3px var(--color-black-04);
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: all 0.2s;
+}
+
+.footer {
+  background: var(--color-white);
+  padding: calc(var(--padding-narrow) / 2) !important;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
+.note {
+  text-align: center;
+  padding: calc(var(--padding-narrow) / 2);
+  color: var(--color-blue);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: var(--color-opacity);
+  z-index: var(--z-top);
+  top: -100%;
+  transition: all 0.3s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.logo {
+  height: 40px;
+}
+
+.invalidNetwork {
+  height: 100vh;
+  background-image: url(/assets/bg.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 200%;
+}
+
+.menu a {
+  outline: none;
+}
+
+.menu div {
+  cursor: pointer;
+  margin-right: var(--padding-wide);
+}
+
+.menu div:hover {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.menu a:hover {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.activeMenu {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+.collapseContent {
+  position: absolute;
+  width: 100%;
+  top: calc(var(--padding-wide) * 3);
+  left: 0;
+  z-index: calc(var(--z-top) + 1);
+  background-color: var(--color-dark);
+}
+
+.menuContent {
+  position: relative;
+  padding: var(--padding-normal) 0;  
+}
+
+.menuContent div {
+  cursor: pointer;
+  margin-bottom: var(--padding-narrow);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socials a {
+  cursor: pointer;
+  padding: calc(var(--padding-narrow) / 2) var(--padding-narrow);
+  margin: 0 calc(var(--padding-narrow) / 2);
+  color: var(--color-black);
+  font-size: var(--font-size-normal);
+}
+
+.socials a:hover {
+  color: var(--color-hightlight);
+}
+
+@media all and (max-width: 992px) {
+  .logo {
+    height: 20px;
+  }
+  .menu div {
+    cursor: pointer;
+    margin-right: var(--padding-narrow);
+  }
+}
+
+@media all and (max-width: 767px) {
+  .logo {
+    height: 16px;
+  }
+  .menu {
+    display: none !important;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobileMenu {
+    display: block;
+  }
+}
+
+@media all and (min-width: 2400px) {
+  .logo {
+    height: 90px;
+  }
+}
+
+@media all and (min-width: 3200px) {
+}

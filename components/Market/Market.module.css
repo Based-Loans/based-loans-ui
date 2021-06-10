@@ -1,0 +1,46 @@
+.market{
+  cursor: pointer;
+}
+
+.supply {
+}
+
+.borrow {
+}
+
+.logo {
+  width: calc(var(--padding-normal) * 2);
+  height: calc(var(--padding-normal) * 2);
+
+  text-align: center;
+  margin-right: var(--padding-normal);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: calc(var(--padding-normal) * 2);
+}
+
+.textOpacity {
+  color: var(--color-black-04);
+}
+
+.progress {
+  position: relative;
+  width: 30px;
+  height: 5px;
+  background-color: var(--color-black-04);
+  border-radius: 3px;
+  margin-right: calc(var(--padding-narrow) / 2);
+}
+
+.percent {
+  position: absolute;
+  height: 5px;
+  left: 0;
+  background-color: var(--color-hightlight);
+  border-radius: 3px;
+}

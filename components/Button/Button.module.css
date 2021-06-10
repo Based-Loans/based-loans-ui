@@ -1,0 +1,11 @@
+.button {
+  padding: 5px;
+}
+
+.button:not(:disabled):active {
+  padding: 5px;
+}
+
+.button:disabled {
+  opacity: 0.9;
+}

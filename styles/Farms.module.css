@@ -1,0 +1,144 @@
+.header {
+  background-image: url(/assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+}
+@media all and (max-width: 767px) {
+  .header {
+    padding: 60px 20px 30px;
+  }
+}
+
+@media all and (min-width: 2400px) {
+  .header {
+    padding: 160px;
+  }
+}
+
+.content {
+  position: relative;
+  flex: 1;
+}
+
+.grid {
+  background: var(--gradient-main);
+  z-index: -1;
+  left: 2vw;
+  right: 2vw;
+  top: 2vw;
+  bottom: 0;
+}
+
+.grid:after {
+  content: '';
+  background-image: url(/assets/grid.png);
+  background-size: 2%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.container {
+  position: relative;
+  top: calc(-6vh - var(--padding-normal));
+  padding: var(--padding-narrow);
+  margin-top: 100px;
+}
+
+@media all and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    top: 0;
+    margin-top: 0;
+  }
+}
+
+.pool {
+  display: flex;
+  width: 100%;
+  max-width: 840px;
+}
+
+@media all and (max-width: 767px) {
+  .pool {
+    flex-direction: column;
+  }
+}
+
+.pool .title {
+  color: var(--color-hightlight);
+  padding: 0 calc(var(--padding-narrow) * 1.5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pool .poolinfo {
+  padding: calc(var(--padding-narrow) * 0.5) calc(var(--padding-narrow) * 1.5);
+}
+
+.poolinfo a {
+  text-decoration: underline;
+}
+
+.pool .stakeBtn {
+  padding: 0 calc(var(--padding-narrow) * 1.5);
+}
+
+.pool .stakeBtn button {
+  margin-top: var(--padding-narrow);
+  margin-bottom: calc(var(--padding-narrow) * 2);
+  color: var(--color-hightlight);
+  background: var(--color-primary);
+  box-shadow: var(--box-shadow-window);
+}
+
+.stake {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.stake .stakeinfo {
+  padding: calc(var(--padding-narrow) * 0.5) calc(var(--padding-narrow) * 1.5);
+}
+
+.stake .btnWrapper {
+  padding: calc(var(--padding-narrow) * 2) calc(var(--padding-narrow) * 1.5)
+    var(--padding-narrow);
+}
+
+.stake .btnWrapper button {
+  flex: 1;
+  color: var(--color-hightlight);
+  background: var(--color-primary);
+  box-shadow: var(--box-shadow-window);
+}
+
+.stake .btnWrapper button:not(:last-child) {
+  margin-right: var(--padding-narrow);
+}
+
+@media all and (max-width: 767px) {
+  .stake .btnWrapper {
+    flex-direction: column;
+  }
+  .stake .btnWrapper button {
+    width: 100%;
+  }
+  .stake .btnWrapper button:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: var(--padding-narrow);
+  }
+}
+
+.emptyFarm {
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+
+.emptyInfo {
+  padding: var(--padding-narrow);
+}

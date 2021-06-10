@@ -1,0 +1,60 @@
+.header {
+  background-image: url(/assets/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+}
+@media all and (max-width: 767px) {
+  .header {
+    padding: 80px 20px 30px;
+  }
+}
+
+@media all and (min-width: 2400px) {
+  .header {
+    padding: 160px;
+  }
+}
+
+.content {
+  position: relative;
+  flex: 1;
+}
+
+.grid {
+  background: var(--gradient-main);
+  z-index: -1;
+  left: 2vw;
+  right: 2vw;
+  top: 2vw;
+  bottom: 0;
+}
+
+.grid:after {
+  content: '';
+  background-image: url(/assets/grid.png);
+  background-size: 2%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.container {
+  position: relative;
+  top: calc(-6vh - var(--padding-normal));
+  padding: var(--padding-narrow);
+  margin-top: 0;
+}
+
+.noMarkets {
+  padding: var(--padding-narrow);
+}
+
+@media all and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    top: 0;
+  }
+}

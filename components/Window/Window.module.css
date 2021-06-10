@@ -1,0 +1,18 @@
+.window {
+  height: fit-content;
+  height: -webkit-fill-available;
+}
+
+.opened {
+  overflow: visible;
+  margin-top: var(--padding-normal);
+}
+
+.closed {
+  height: 0;
+  overflow: hidden;
+}
+
+.window p {
+  font-size: 125%;
+}

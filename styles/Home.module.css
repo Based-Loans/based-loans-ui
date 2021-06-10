@@ -1,0 +1,141 @@
+  .container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  background-image: url("/assets/intro/clouds.jpg");
+  background-size: cover;
+}
+
+.header {
+  background: transparent;
+  padding: calc(var(--padding-narrow) / 2) !important;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.socials a {
+  cursor: pointer;
+  padding: calc(var(--padding-narrow) / 2) var(--padding-narrow);
+  margin: 0 calc(var(--padding-narrow) / 2);
+  color: var(--color-black);
+  font-size: var(--font-size-normal);
+}
+
+.socials a:hover {
+  color: var(--color-hightlight);
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding-bottom: 60px;
+}
+
+.content img {
+  max-width: 80%;
+}
+
+.art {
+  margin-right: 5%;
+}
+
+.logo {
+  margin-top: var(--padding-normal);
+}
+
+.button {
+  background: var(--color-primary);
+  box-shadow: var(--box-shadow-window-border);
+  padding-left: var(--padding-wide) !important;
+  padding-right: var(--padding-wide) !important;
+  color: var(--color-hightlight);
+  border: 1px solid var(--color-black);
+
+  text-shadow: -1px -1px var(--color-light);
+  font-size: var(--font-size-2x);
+  margin-top: var(--padding-narrow);
+}
+
+.ebook {
+  color: #3e3e3e;
+  margin-top: var(--padding-normal);
+  font-size: var(--font-size-normal);
+  text-decoration: underline;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: var(--padding-narrow);
+}
+
+.footer .copyRight {
+  color: #969696;
+  font-size: var(--font-size-small);
+  margin-right: 24px;
+}
+
+.chatbox {
+  width: 380px;
+  min-width: 320px;
+  border: 1px solid #969696;
+  padding: var(--padding-narrow);
+  background-color: var(--color-white);
+  z-index: 2;
+}
+
+.chatbox img {
+  width: 120px;
+  min-width: 120px;
+}
+
+.help {
+  color: var(--color-black);
+  font-size: var(--font-size-2x);
+}
+
+.liveChat {
+  color: var(--color-black);
+  font-size: var(--font-size-small);
+}
+
+.chatbox button {
+  background-color: #b8caef;
+  color: #798fb4;
+  font-size: var(--font-size-small);
+  margin-bottom: var(--padding-narrow);
+  line-height: 1.3;
+}
+
+.warning {
+  color: #b5b5b5;
+  font-size: calc(var(--font-size-small) - 4px);
+}
+
+@media all and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+  }
+  .footer {
+    position: relative;
+    flex-direction: column;
+    margin-top: var(--padding-wide);
+  }
+  .footer .copyRight {
+    margin-right: 0px;
+  }
+  .chatbox {
+    margin-top: var(--padding-narrow);
+  }
+}

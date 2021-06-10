@@ -1,0 +1,171 @@
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: calc(var(--z-top) + 1);
+  background-color: var(--color-black-04);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+}
+
+.overlay .window {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.loading {
+  margin-top: 0;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: var(--padding-narrow);
+}
+
+.tabs button {
+  flex: 1;
+  box-shadow: none !important;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-border);
+}
+
+button.active {
+  background-color: var(--color-hightlight);
+  color: var(--color-light);
+}
+
+.form {
+  padding: 0 var(--padding-narrow) var(--padding-narrow);
+}
+
+.form p {
+  margin-bottom: var(--padding-narrow);
+}
+
+.form button {
+  margin-left: var(--padding-narrow);
+}
+
+.field {
+  margin-bottom: var(--padding-narrow);
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  margin-bottom: var(--padding-narrow);
+}
+
+.field label > span {
+  cursor: pointer;
+  color: var(--color-hightlight);
+  text-decoration: underline;
+}
+
+.balance {
+  margin-top: var(--padding-narrow);
+}
+
+.info {
+  padding: var(--padding-narrow) 0;
+}
+
+.info img {
+  width: var(--padding-normal);
+  height: var(--padding-normal);
+  margin-right: var(--padding-narrow);
+}
+
+.info:not(:last-child) {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.claimBtn button {
+  margin-left: 0px;
+  margin-top: var(--padding-narrow);
+}
+
+.errMsg {
+  color: var(--color-hightlight);
+  font-weight: bold;
+}
+
+.bug {
+  position: absolute;
+  top: calc(50% + var(--padding-narrow) * (var(--nth-child)));
+  left: calc(50% + var(--padding-narrow) * (var(--nth-child)));
+  transform: translate(-50%, -50%);
+}
+@media all and (max-width: 767px) {
+  .bug {
+    left: unset;
+    right: calc(50% + var(--padding-narrow) * (var(--nth-child) - 15));
+    transform: translate(50%, -50%);
+  }
+}
+
+.pending {
+  position: relative;
+  z-index: 1;
+}
+
+.networks {
+  background-image: url(/assets/modal-bg.jpeg);
+  background-size: cover;
+  padding: var(--padding-normal);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.networks p {
+  text-transform: uppercase;
+  color: var(--color-blue);
+  font-size: 150%;
+}
+
+.network {
+  width: 120px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.invalid {
+  font-size: var(--font-size-normal);
+  text-align: center;
+}
+
+.networks img {
+  width: 100%;
+}
+
+.networks img:nth-child(2) {
+  width: 50%;
+  margin-top: 20px;
+}
