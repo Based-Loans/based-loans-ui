@@ -29,7 +29,7 @@ export default function Home(props) {
             Discord
           </a>
           <a
-            href="https://twitter.com/BasedProtocol"
+            href="https://twitter.com/basedloans"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -41,6 +41,13 @@ export default function Home(props) {
             rel="noopener noreferrer"
           >
             Telegram
+          </a>
+          <a
+            href="https://github.com/Based-Loans"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Github
           </a>
         </div>
       </header>
