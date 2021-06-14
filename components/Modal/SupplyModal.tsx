@@ -89,31 +89,16 @@ export default function SupplyModal({
     let value = (e.target.value || '').replace(/[^.\d]/g, '')
     if (value.endsWith('.')) {
       value = value.replace(/\./g, '') + '.'
-    } else if (value) {
+    } else {
+      if (value) {
         value =
           Number(value) !== 0
             ? toFixed(value, market.underlyingDecimals, true)
             : value
+      }
     }
-
-    handleCursor(e, value)
     setForm({ ...form, [e.target.name]: value.toString() })
   }
-
-    const handleCursor = (e, formattedValue) => {
-        let cursorPosition = e.target.selectionStart
-        let originalValue = e.target.value
-        const element = e.target
-        if (formattedValue.toString().length < originalValue.length) {
-            // accounts for reformatted inputs where chars are omitted
-            // (e.g. 2a.3 reformats to 2.3 but cursor stays between 2 and '.')
-          cursorPosition = (cursorPosition > 0) ? cursorPosition - 1 : cursorPosition
-        }
-        window.requestAnimationFrame(() => {
-          element.selectionStart = cursorPosition
-          element.selectionEnd = cursorPosition
-        });
-    }
 
   const handleSubmit = (e) => {
     e.preventDefault()
