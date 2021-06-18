@@ -134,8 +134,14 @@ export default function Layout({
           rel="stylesheet"
           type="text/css"
         />
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+          rel="stylesheet"
+        /> */}
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" 
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
@@ -160,7 +166,7 @@ export default function Layout({
                   </div>
                 )}
             </div>
-            <div className="flex-center justify-between limited">
+            <div className="justify-between flex-center limited">
               <Link href="/">
                 <img
                   className={`${styles.logo} cursor`}
@@ -238,7 +244,7 @@ export default function Layout({
             </div>
           </header>
           <header className={styles.popup}>
-            <div className="flex-center justify-between limited">
+            <div className="justify-between flex-center limited">
               <Link href="/">
                 <img
                   className={`${styles.logo} cursor`}

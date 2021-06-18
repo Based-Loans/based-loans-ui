@@ -1,8 +1,9 @@
 :root {
-  --font-family: 'VT323', monospace;
-  --font-size-normal: 16px;
-  --font-size-small: 14px;
-  --font-size-2x: 24px;
+  /* --font-family: 'VT323', monospace; */
+  --font-family: 'Inconsolata', monospace;
+  --font-size-normal: 14px;
+  --font-size-small: 12px;
+  --font-size-2x: 26px;
   --font-size-3x: 32px;
 
   --color-black: #000000;

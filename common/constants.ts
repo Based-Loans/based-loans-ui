@@ -3,4 +3,4 @@ export const ETHERSCAN_URL = 'https://etherscan.io/token/0x68481f2c02be3786987ac
 export const DISCORD_URL = 'https://discord.gg/H44DWX48Ra';
 export const TWITTER_URL = 'https://twitter.com/basedloans';
 export const TELEGRAM_URL = 'https://t.me/basedmoney';
-export const GITHUB_URL = 'https://github.com/Based-Loans'
+export const GITHUB_URL = 'https://github.com/Based-Loans';
