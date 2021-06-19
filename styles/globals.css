@@ -3,6 +3,7 @@
   --font-family: 'Inconsolata', monospace;
   --font-size-normal: 14px;
   --font-size-small: 12px;
+  --font-size-smaller: 10px;
   --font-size-2x: 26px;
   --font-size-3x: 32px;
 
@@ -207,6 +208,18 @@ button {
     padding: var(--padding-normal) calc(var(--padding-normal) * 3 / 4);
   }
 }
+
+/* workaround for new font being a bit larger */
+@media all and (max-width: 1000px) {
+  body {
+    font-size: var(--font-size-small);
+  }
+  .limited {
+    padding: var(--padding-normal) calc(var(--padding-normal) * 3 / 4);
+  }
+}
+
+
 @media all and (min-width: 2400px) {
   body {
     font-size: var(--font-size-2x);

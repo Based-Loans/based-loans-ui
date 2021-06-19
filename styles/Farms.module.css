@@ -60,6 +60,7 @@
   display: flex;
   width: 100%;
   max-width: 840px;
+  margin-top: calc(var(--padding-narrow) * 2);
 }
 
 @media all and (max-width: 767px) {
@@ -72,6 +73,9 @@
   color: var(--color-hightlight);
   padding: 0 calc(var(--padding-narrow) * 1.5);
   border-bottom: 1px solid var(--color-border);
+  margin-bottom: calc(var(--padding-narrow));
+  padding-bottom: calc(var(--padding-narrow));
+  font-weight: 600;
 }
 
 .pool .poolinfo {
@@ -80,6 +84,10 @@
 
 .poolinfo a {
   text-decoration: underline;
+}
+
+.poolinfo div {
+  margin-bottom: calc(var(--padding-narrow));
 }
 
 .pool .stakeBtn {
@@ -118,6 +126,10 @@
 
 .stake .btnWrapper button:not(:last-child) {
   margin-right: var(--padding-narrow);
+}
+
+.stakeText {
+  margin-top: calc(var(--padding-narrow) * 1.25);
 }
 
 @media all and (max-width: 767px) {

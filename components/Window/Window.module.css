@@ -15,5 +15,6 @@
 
 .window p {
   /* font-size: 125%; */
+  /* new font needs smaller % increase */
   font-size: 115%;
 }

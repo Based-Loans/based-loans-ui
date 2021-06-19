@@ -13,10 +13,10 @@
     "bignumber.js": "^9.0.1",
     "evm-chains": "^0.2.0",
     "graphql": "^15.5.0",
-    "next": "10.0.7",
-    "react": "17.0.1",
+    "next": "10.2.3",
+    "react": "^17.0.2",
     "react-collapse": "^5.1.0",
-    "react-dom": "17.0.1",
+    "react-dom": "^17.0.2",
     "web3": "^1.3.4",
     "web3modal": "^1.9.3"
   },

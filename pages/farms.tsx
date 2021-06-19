@@ -262,7 +262,7 @@ export default function Farms(props) {
                     <div
                       className={`${styles.stakeBtn} flex-center flex-column justify-center`}
                     >
-                      <div>STAKE THIS ASSET?</div>
+                      <div className={styles.stakeText}>STAKE THIS ASSET?</div>
                       <Button
                         className="full"
                         onClick={() => setSelectedPool({ pId: idx })}
