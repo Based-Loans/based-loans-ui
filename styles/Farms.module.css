@@ -2,8 +2,10 @@
   background-image: url(/assets/bg.jpg);
   background-size: cover;
   background-position: center;
-  padding: 80px 0;
+  padding: 140px 0;
 }
+
+
 @media all and (max-width: 767px) {
   .header {
     padding: 60px 20px 30px;
@@ -11,10 +13,23 @@
 }
 
 @media all and (min-width: 2400px) {
-  .header {
+  .container {
     padding: 160px;
   }
 }
+
+
+@media all and (min-width: 1200px) {
+  .container *{
+    font-size: 102%;
+  }
+
+  .pool {
+    max-width: 1000px;
+    /* margin-top: calc(var(--padding-narrow) * 2); */
+  }
+}
+
 
 .content {
   position: relative;
@@ -60,14 +75,27 @@
   display: flex;
   width: 100%;
   max-width: 840px;
-  margin-top: calc(var(--padding-narrow) * 2);
+  /* margin-top: calc(var(--padding-narrow) * 2); */
+
+  margin-top: -100px;
 }
 
 @media all and (max-width: 767px) {
   .pool {
     flex-direction: column;
+    margin-top: calc(var(--padding-narrow) * 2);
   }
 }
+
+
+@media all and (max-width: 767px) {
+  .pool {
+    flex-direction: column;
+    margin-top: calc(var(--padding-narrow) * 2);
+  }
+}
+
+
 
 .pool .title {
   color: var(--color-hightlight);

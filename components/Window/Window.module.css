@@ -18,3 +18,10 @@
   /* new font needs smaller % increase */
   font-size: 115%;
 }
+
+
+@media all and (max-width: 1150px) {
+  .window p {
+    font-size: 110%;
+  }
+}
